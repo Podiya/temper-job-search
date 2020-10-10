@@ -89,6 +89,10 @@ class JobListViewController: BaseViewController {
     @IBAction func didPressKaart(_ sender: Any) {
         self.present(JobMapViewController(viewModel: JobMapViewModel()), animated: true, completion: nil)
     }
+    @IBAction func didPressSignup(_ sender: Any) {
+        let controllor = UINavigationController(rootViewController: SignupViewController.initFromNib())
+        self.present(controllor, animated: true, completion: nil)
+    }
 }
 
 extension JobListViewController: UITableViewDelegate {
@@ -119,5 +123,4 @@ extension JobListViewController: UITableViewDelegate {
         }
     }
 }
-
 

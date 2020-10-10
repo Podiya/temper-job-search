@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,14 +22,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="r0k-tm-QKc">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="752"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CVi-sq-oMh">
-                    <rect key="frame" x="131" y="712" width="152" height="50"/>
+                    <rect key="frame" x="128" y="712" width="158" height="50"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="OuP-4C-b14">
-                            <rect key="frame" x="0.0" y="0.0" width="152" height="50"/>
+                            <rect key="frame" x="3" y="0.0" width="152" height="50"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0th-NT-LHd">
                                     <rect key="frame" x="0.0" y="0.0" width="80" height="50"/>
@@ -38,7 +39,7 @@
                                     </constraints>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                     <state key="normal" title="  Filters ">
-                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="titleColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                 </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BvY-Fc-oBo">
@@ -57,7 +58,7 @@
                                     </constraints>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                     <state key="normal" title="Kaart">
-                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="titleColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                     <connections>
                                         <action selector="didPressKaart:" destination="-1" eventType="touchUpInside" id="JmA-dI-wu3"/>
@@ -69,8 +70,8 @@
                     <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="OuP-4C-b14" firstAttribute="top" secondItem="CVi-sq-oMh" secondAttribute="top" id="0Jd-hu-qCp"/>
-                        <constraint firstItem="OuP-4C-b14" firstAttribute="leading" secondItem="CVi-sq-oMh" secondAttribute="leading" id="JJO-Jd-rfP"/>
-                        <constraint firstAttribute="trailing" secondItem="OuP-4C-b14" secondAttribute="trailing" id="U4J-tj-a0Y"/>
+                        <constraint firstItem="OuP-4C-b14" firstAttribute="leading" secondItem="CVi-sq-oMh" secondAttribute="leading" constant="3" id="JJO-Jd-rfP"/>
+                        <constraint firstAttribute="trailing" secondItem="OuP-4C-b14" secondAttribute="trailing" constant="3" id="U4J-tj-a0Y"/>
                         <constraint firstAttribute="bottom" secondItem="OuP-4C-b14" secondAttribute="bottom" id="p73-GS-BSC"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
@@ -88,21 +89,79 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O8v-Ua-InU">
+                    <rect key="frame" x="0.0" y="796" width="414" height="66"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hQW-po-rei">
+                            <rect key="frame" x="15" y="8" width="384" height="50"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQ9-a7-C8e">
+                                    <rect key="frame" x="0.0" y="0.0" width="187" height="50"/>
+                                    <color key="backgroundColor" name="AppFloatingAlertSuccessText"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                    <state key="normal" title="Sign up">
+                                        <color key="titleColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="didPressSignup:" destination="-1" eventType="touchUpInside" id="wio-uw-X14"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNt-xi-T3Z">
+                                    <rect key="frame" x="197" y="0.0" width="187" height="50"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                    <state key="normal" title="Log in">
+                                        <color key="titleColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="2"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="hQW-po-rei" firstAttribute="leading" secondItem="O8v-Ua-InU" secondAttribute="leading" constant="15" id="LaB-JY-f8L"/>
+                        <constraint firstAttribute="trailing" secondItem="hQW-po-rei" secondAttribute="trailing" constant="15" id="PIT-QO-XfZ"/>
+                        <constraint firstAttribute="height" constant="66" id="efk-jg-hxE"/>
+                        <constraint firstItem="hQW-po-rei" firstAttribute="top" secondItem="O8v-Ua-InU" secondAttribute="top" constant="8" id="hFZ-lC-pZ6"/>
+                        <constraint firstAttribute="bottom" secondItem="hQW-po-rei" secondAttribute="bottom" constant="8" id="uB0-Me-99T"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="r0k-tm-QKc" secondAttribute="bottom" id="3ww-8P-2eY"/>
+                <constraint firstItem="O8v-Ua-InU" firstAttribute="top" secondItem="r0k-tm-QKc" secondAttribute="bottom" id="3V0-ec-ARY"/>
                 <constraint firstItem="CVi-sq-oMh" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="AvV-SS-oDJ"/>
                 <constraint firstItem="r0k-tm-QKc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="FG7-Bt-Yqf"/>
                 <constraint firstItem="r0k-tm-QKc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="GEd-RA-lqp"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="CVi-sq-oMh" secondAttribute="bottom" constant="100" id="bMt-r8-bv2"/>
+                <constraint firstItem="O8v-Ua-InU" firstAttribute="top" secondItem="CVi-sq-oMh" secondAttribute="bottom" constant="34" id="QnC-kM-znE"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="O8v-Ua-InU" secondAttribute="trailing" id="WsE-ch-AGl"/>
+                <constraint firstItem="O8v-Ua-InU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="g8i-gK-NY1"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="r0k-tm-QKc" secondAttribute="trailing" id="lRn-2g-q3s"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="O8v-Ua-InU" secondAttribute="bottom" id="loJ-FF-jNz"/>
             </constraints>
             <point key="canvasLocation" x="-1610.144927536232" y="93.75"/>
         </view>
     </objects>
     <resources>
+        <namedColor name="AppFloatingAlertSuccessText">
+            <color red="0.16470588235294117" green="0.99215686274509807" blue="0.54509803921568623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

@@ -16,6 +16,12 @@
 		CE4C292C252E6A2B00C7C77E /* JobListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C292A252E6A2B00C7C77E /* JobListViewController.swift */; };
 		CE4C292D252E6A2B00C7C77E /* JobListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE4C292B252E6A2B00C7C77E /* JobListViewController.xib */; };
 		CE4C2931252E6C6100C7C77E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C2930252E6C6100C7C77E /* BaseViewController.swift */; };
+		CE668DAC2531E98A00DFC435 /* GreenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE668DAB2531E98A00DFC435 /* GreenButton.swift */; };
+		CE8E58E32531FDBB005E7A17 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E58E12531FDBB005E7A17 /* SignupViewController.swift */; };
+		CE8E58E42531FDBB005E7A17 /* SignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8E58E22531FDBB005E7A17 /* SignupViewController.xib */; };
+		CE8E58E82531FF86005E7A17 /* MobileNumberValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E58E62531FF86005E7A17 /* MobileNumberValidationViewController.swift */; };
+		CE8E58E92531FF86005E7A17 /* MobileNumberValidationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8E58E72531FF86005E7A17 /* MobileNumberValidationViewController.xib */; };
+		CE8E58ED253205B7005E7A17 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E58EC253205B7005E7A17 /* UIViewControllerExtension.swift */; };
 		CEA78ED6253035B300C33665 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA78ED5253035B300C33665 /* HttpClient.swift */; };
 		CEA78EDB2530369600C33665 /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA78EDA2530369600C33665 /* BundleExtension.swift */; };
 		CEA78EDF253036D400C33665 /* DataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA78EDE253036D400C33665 /* DataExtension.swift */; };
@@ -57,6 +63,12 @@
 		CE4C292A252E6A2B00C7C77E /* JobListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListViewController.swift; sourceTree = "<group>"; };
 		CE4C292B252E6A2B00C7C77E /* JobListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobListViewController.xib; sourceTree = "<group>"; };
 		CE4C2930252E6C6100C7C77E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		CE668DAB2531E98A00DFC435 /* GreenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenButton.swift; sourceTree = "<group>"; };
+		CE8E58E12531FDBB005E7A17 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		CE8E58E22531FDBB005E7A17 /* SignupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupViewController.xib; sourceTree = "<group>"; };
+		CE8E58E62531FF86005E7A17 /* MobileNumberValidationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileNumberValidationViewController.swift; sourceTree = "<group>"; };
+		CE8E58E72531FF86005E7A17 /* MobileNumberValidationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MobileNumberValidationViewController.xib; sourceTree = "<group>"; };
+		CE8E58EC253205B7005E7A17 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		CEA78ED5253035B300C33665 /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
 		CEA78EDA2530369600C33665 /* BundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
 		CEA78EDE253036D400C33665 /* DataExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtension.swift; sourceTree = "<group>"; };
@@ -134,6 +146,7 @@
 		CE4C2906252E5E8E00C7C77E /* TemperWorks */ = {
 			isa = PBXGroup;
 			children = (
+				CE8E58DD2531FCF3005E7A17 /* Authorization */,
 				CEB57BCC253167EA00DB491A /* Base */,
 				CEB57BCB253167D400DB491A /* CommonUI */,
 				CEA78ED92530360600C33665 /* Extensions */,
@@ -166,6 +179,33 @@
 			path = JobList;
 			sourceTree = "<group>";
 		};
+		CE8E58DD2531FCF3005E7A17 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				CE8E58E02531FD6F005E7A17 /* MobileNumberValidation */,
+				CE8E58DE2531FD00005E7A17 /* Signup */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
+		CE8E58DE2531FD00005E7A17 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				CE8E58E12531FDBB005E7A17 /* SignupViewController.swift */,
+				CE8E58E22531FDBB005E7A17 /* SignupViewController.xib */,
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
+		CE8E58E02531FD6F005E7A17 /* MobileNumberValidation */ = {
+			isa = PBXGroup;
+			children = (
+				CE8E58E62531FF86005E7A17 /* MobileNumberValidationViewController.swift */,
+				CE8E58E72531FF86005E7A17 /* MobileNumberValidationViewController.xib */,
+			);
+			path = MobileNumberValidation;
+			sourceTree = "<group>";
+		};
 		CEA78ED42530359100C33665 /* Clients */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +223,7 @@
 				CEA78F012531021300C33665 /* UIViewExtension.swift */,
 				CEB57BB925315E4A00DB491A /* DateExtension.swift */,
 				CEB57BBC25315E7300DB491A /* StringExtension.swift */,
+				CE8E58EC253205B7005E7A17 /* UIViewControllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -208,13 +249,29 @@
 		CEAE59B92531B6C300E88698 /* JobMap */ = {
 			isa = PBXGroup;
 			children = (
+				CEAE59CB2531DFAA00E88698 /* Service */,
+				CEAE59CA2531DF9500E88698 /* ViewModels */,
 				CEAE59BA2531B73400E88698 /* JobMapViewController.swift */,
 				CEAE59BB2531B73400E88698 /* JobMapViewController.xib */,
-				CEAE59C12531DB9D00E88698 /* JobMapService.swift */,
-				CEAE59C42531DBC400E88698 /* JobMapViewModel.swift */,
-				CEAE59C72531DBF100E88698 /* JobMapLocationViewModel.swift */,
 			);
 			path = JobMap;
+			sourceTree = "<group>";
+		};
+		CEAE59CA2531DF9500E88698 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CEAE59C72531DBF100E88698 /* JobMapLocationViewModel.swift */,
+				CEAE59C42531DBC400E88698 /* JobMapViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CEAE59CB2531DFAA00E88698 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CEAE59C12531DB9D00E88698 /* JobMapService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		CEB57BC5253166DC00DB491A /* ViewModels */ = {
@@ -239,6 +296,7 @@
 			children = (
 				CEA78EEF2530B86600C33665 /* PulsateHUD.swift */,
 				CEA78EF22530B88D00C33665 /* FloatingAlertView.swift */,
+				CE668DAB2531E98A00DFC435 /* GreenButton.swift */,
 			);
 			path = CommonUI;
 			sourceTree = "<group>";
@@ -316,7 +374,9 @@
 				CE4C2914252E5E8F00C7C77E /* LaunchScreen.storyboard in Resources */,
 				CEA78EE22530377E00C33665 /* Settings.plist in Resources */,
 				CE4C2911252E5E8F00C7C77E /* Assets.xcassets in Resources */,
+				CE8E58E92531FF86005E7A17 /* MobileNumberValidationViewController.xib in Resources */,
 				CE4C292D252E6A2B00C7C77E /* JobListViewController.xib in Resources */,
+				CE8E58E42531FDBB005E7A17 /* SignupViewController.xib in Resources */,
 				CEA78EFF2530C24E00C33665 /* JobTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,6 +432,8 @@
 			files = (
 				CEAE59C82531DBF100E88698 /* JobMapLocationViewModel.swift in Sources */,
 				CEA78EF32530B88D00C33665 /* FloatingAlertView.swift in Sources */,
+				CE8E58ED253205B7005E7A17 /* UIViewControllerExtension.swift in Sources */,
+				CE8E58E82531FF86005E7A17 /* MobileNumberValidationViewController.swift in Sources */,
 				CEB57BBA25315E4A00DB491A /* DateExtension.swift in Sources */,
 				CEB57BC7253166EA00DB491A /* JobViewModel.swift in Sources */,
 				CE4C2931252E6C6100C7C77E /* BaseViewController.swift in Sources */,
@@ -392,9 +454,11 @@
 				CEAE59C52531DBC400E88698 /* JobMapViewModel.swift in Sources */,
 				CEB57BBD25315E7300DB491A /* StringExtension.swift in Sources */,
 				CEB57BC02531665B00DB491A /* JobListViewModel.swift in Sources */,
+				CE8E58E32531FDBB005E7A17 /* SignupViewController.swift in Sources */,
 				CEA78EDF253036D400C33665 /* DataExtension.swift in Sources */,
 				CEA78ED6253035B300C33665 /* HttpClient.swift in Sources */,
 				CEB57BC3253166B600DB491A /* BaseViewControllerViewModel.swift in Sources */,
+				CE668DAC2531E98A00DFC435 /* GreenButton.swift in Sources */,
 				CE4C290A252E5E8E00C7C77E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -70,7 +70,9 @@ class JobMapViewController: BaseViewController {
     }
     
     @objc func didChangedDate() {
-        viewModel.fetchJobs(by: datePicker.date)
+        if isLocationEnable {
+            viewModel.fetchJobs(by: datePicker.date)
+        }
     }
     
     @IBAction func didPressClose(_ sender: Any) {
@@ -95,6 +97,7 @@ class JobMapViewController: BaseViewController {
             self.showAlert(text: "You have restricted accessing location on your phone. Please enable location for further actions.", type: .error)
             break
         case .notDetermined:
+            isLocationEnable = false
             locationManager.requestWhenInUseAuthorization()
             break
         default:
@@ -121,6 +124,10 @@ extension JobMapViewController: CLLocationManagerDelegate {
         switch status {
         case .authorizedWhenInUse, .authorizedAlways:
             self.viewModel.fetchJobs(by: Date())
+            break
+        case .denied, .restricted:
+            isLocationEnable = false
+            self.showAlert(text: "You have restricted accessing location on your phone. Please enable location for further actions.", type: .error)
             break
         default:
            break
