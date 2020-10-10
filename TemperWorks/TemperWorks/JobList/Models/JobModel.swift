@@ -8,7 +8,6 @@
 import Foundation
 
 
-
 struct JobModel: Codable {
     let id: Int
     let shifts: [ShiftModel]

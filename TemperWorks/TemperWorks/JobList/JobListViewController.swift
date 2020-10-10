@@ -8,15 +8,22 @@
 import UIKit
 import RxSwift
 import RxCocoa
-import Nuke
+import RxDataSources
 
-
+enum ScrollDirection {
+    case up
+    case down
+}
 
 class JobListViewController: BaseViewController {
     
     @IBOutlet weak var jobListTableView: UITableView!
     private let disposeBag = DisposeBag()
     private let viewModel: JobListViewModel
+    private var dataSource: RxTableViewSectionedReloadDataSource<SectionModel<String, JobViewModel>>!
+    private let jobCell = "jobCell"
+    private let refresher = UIRefreshControl()
+    private var scrollDirection: ScrollDirection = .up
     
     init(viewModel: JobListViewModel) {
         self.viewModel = viewModel
@@ -33,145 +40,76 @@ class JobListViewController: BaseViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        viewModel.fetchJobViewModels()
+        viewModel.initialFetch()
     }
     
     override func setupUI() {
         super.setupUI()
-        jobListTableView.register(UINib(nibName: String(describing: JobTableViewCell.self), bundle: nil), forCellReuseIdentifier: "jobCell")
+        jobListTableView.register(UINib(nibName: String(describing: JobTableViewCell.self), bundle: nil), forCellReuseIdentifier: jobCell)
+        
     }
     
     override func setupViewModelListners() {
         super.setupViewModelListners()
-        _ = viewModel.status.bind { (status) in
+        _ = viewModel.status.bind { status in
             DispatchQueue.main.async {
                 status == .fetching ? self.showHud() : self.hideHud()
             }
-        }
-        viewModel.jobsObserver.bind(to: jobListTableView.rx.items(cellIdentifier: "jobCell", cellType: JobTableViewCell.self)) { index, viewModel, cell in
-            cell.update(model: viewModel)
         }.disposed(by: disposeBag)
-    }
-}
-
-
-
-
-
-final class JobListViewModel: BaseViewControllerViewModel {
-    
-    private let jobListService: JobListServiceProtocol
-    private var startingDate = Date().addingTimeInterval(-86400)
-    private let disposeBag = DisposeBag()
-    var jobsObserver = BehaviorSubject<[JobViewModel]>(value: [])
-    var jobDates = [String]()
-    
-    
-    init(jobListService: JobListServiceProtocol = JobListService()) {
-        self.jobListService = jobListService
-    }
-    
-    func fetchJobViewModels() {
-        status.on(.next(.fetching))
-        let nextThreeDates = startingDate.nextThreeDates
-        let stringDates = nextThreeDates.map { $0.toString() }.joined(separator: ",")
-        
-        jobListService.fetchJobs(dates: stringDates).subscribe { (response) in
-            if let data = response?.data {
-                var jobViewModels = [JobViewModel]()
-                for (key, value) in data {
-                    self.jobDates.append(key)
-                    jobViewModels.append(contentsOf: value.map { JobViewModel(model: $0) })
-                }
-                self.jobsObserver.on(.next(jobViewModels))
-                self.jobsObserver.on(.completed)
+        _ = viewModel.error.bind { error in
+            self.showAlert(text: error, type: FloatingAlertType.error)
+        }.disposed(by: disposeBag)
+        _ = viewModel.isRefreshing.bind { bool in
+            DispatchQueue.main.async {
+                bool ? self.refresher.beginRefreshing() : self.refresher.endRefreshing()
             }
-
-        } onError: { (e) in
-            self.error.on(.next(e.localizedDescription))
-        } onCompleted: {
-            self.status.on(.next(.done))
-        }.disposed(by: disposeBag)
-
-        
-        startingDate = nextThreeDates.last!
-    }
-}
-
-class BaseViewControllerViewModel {
-    var status = BehaviorSubject<Status>(value: Status.done)
-    var error = BehaviorSubject<String>(value: "")
-}
-
-
-
-
-
-
-enum Status {
-    case fetching
-    case done
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-struct JobViewModel {
-    
-    private let model: JobModel
-    var clientName: String {
-        model.client.name
-    }
-    var shiftTime: String {
-        if !model.shifts.isEmpty {
-            return "\(model.shifts[0].startTime) - \(model.shifts[0].endTime)"
         }
-        return ""
-    }
-    var coverImage: String {
-        model.client.photos.first?.formats.first?.cdnURL ?? ""
+        dataSource = RxTableViewSectionedReloadDataSource<SectionModel<String, JobViewModel>> { (dataSource, tableView, indexPath, item) -> JobTableViewCell in
+            let cell = tableView.dequeueReusableCell(withIdentifier: self.jobCell) as! JobTableViewCell
+            cell.update(model: item)
+            return cell
+        }
+        viewModel.jobsObserver.bind(to: jobListTableView.rx.items(dataSource: dataSource)).disposed(by: disposeBag)
+        jobListTableView.rx.setDelegate(self).disposed(by: disposeBag)
+        
+        
+        jobListTableView.addSubview(refresher)
+        refresher.addTarget(self, action: #selector(refresh), for: .valueChanged)
         
     }
-    var jobCategory: String {
-        model.jobCategory.jobCategoryDescription
-    }
-    var earningsPerHour: String {
-        if !model.shifts.isEmpty {
-            return "$ \(String(format: "%.2f", model.shifts[0].earningsPerHour))"
-        }
-        return ""
-    }
-    
-    init(model: JobModel) {
-        self.model = model
+
+    @objc func refresh() {
+        viewModel.refresh()
     }
 }
 
-extension Date {
-    var nextThreeDates: [Date] {
-        var dates = [Date]()
-        for i in 1...3 {
-            guard let date = Calendar.current.date(byAdding: .day, value: i, to: self) else { return dates }
-            dates.append(date)
-        }
-        return dates
+extension JobListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = JobListHeaderView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 40))
+        headerView.label.text = dataSource[section].model
+        return headerView
     }
     
-    func toString(format: String = "yyyy-MM-dd") -> String {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .short
-        formatter.dateFormat = format
-        return formatter.string(from: self)
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if scrollDirection == .down {
+                let jobs = viewModel.jobsObserver.value
+                if indexPath.section == jobs.count - 1 && indexPath.row == jobs.last!.items.count - 10 {
+                    viewModel.fetchJobViewModels()
+                }
+        }
+    }
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        if targetContentOffset.pointee.y < scrollView.contentOffset.y {
+            scrollDirection = .up
+        } else {
+            scrollDirection = .down
+        }
     }
 }
+
+
