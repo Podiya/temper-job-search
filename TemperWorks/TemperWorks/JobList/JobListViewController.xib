@@ -24,19 +24,88 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CVi-sq-oMh">
+                    <rect key="frame" x="131" y="712" width="152" height="50"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="OuP-4C-b14">
+                            <rect key="frame" x="0.0" y="0.0" width="152" height="50"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0th-NT-LHd">
+                                    <rect key="frame" x="0.0" y="0.0" width="80" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="ADr-CT-wZd"/>
+                                        <constraint firstAttribute="width" constant="80" id="jxz-hp-RwK"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <state key="normal" title="  Filters ">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BvY-Fc-oBo">
+                                    <rect key="frame" x="80" y="8" width="2" height="34"/>
+                                    <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="2" id="FSL-nI-aea"/>
+                                        <constraint firstAttribute="height" constant="34" id="koc-NR-EU3"/>
+                                    </constraints>
+                                </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSh-RV-liv">
+                                    <rect key="frame" x="82" y="0.0" width="70" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="Dk4-75-Dpr"/>
+                                        <constraint firstAttribute="width" constant="70" id="rOR-OH-MSC"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <state key="normal" title="Kaart">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="didPressKaart:" destination="-1" eventType="touchUpInside" id="JmA-dI-wu3"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="OuP-4C-b14" firstAttribute="top" secondItem="CVi-sq-oMh" secondAttribute="top" id="0Jd-hu-qCp"/>
+                        <constraint firstItem="OuP-4C-b14" firstAttribute="leading" secondItem="CVi-sq-oMh" secondAttribute="leading" id="JJO-Jd-rfP"/>
+                        <constraint firstAttribute="trailing" secondItem="OuP-4C-b14" secondAttribute="trailing" id="U4J-tj-a0Y"/>
+                        <constraint firstAttribute="bottom" secondItem="OuP-4C-b14" secondAttribute="bottom" id="p73-GS-BSC"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                            <real key="value" value="6"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                            <real key="value" value="0.20000000000000001"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                            <size key="value" width="2" height="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="r0k-tm-QKc" secondAttribute="bottom" id="3ww-8P-2eY"/>
+                <constraint firstItem="CVi-sq-oMh" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="AvV-SS-oDJ"/>
                 <constraint firstItem="r0k-tm-QKc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="FG7-Bt-Yqf"/>
                 <constraint firstItem="r0k-tm-QKc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="GEd-RA-lqp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="CVi-sq-oMh" secondAttribute="bottom" constant="100" id="bMt-r8-bv2"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="r0k-tm-QKc" secondAttribute="trailing" id="lRn-2g-q3s"/>
             </constraints>
-            <point key="canvasLocation" x="-1610" y="94"/>
+            <point key="canvasLocation" x="-1610.144927536232" y="93.75"/>
         </view>
     </objects>
     <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

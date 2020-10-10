@@ -46,32 +46,36 @@ class JobListViewController: BaseViewController {
     override func setupUI() {
         super.setupUI()
         jobListTableView.register(UINib(nibName: String(describing: JobTableViewCell.self), bundle: nil), forCellReuseIdentifier: jobCell)
-        
     }
     
     override func setupViewModelListners() {
         super.setupViewModelListners()
+        
         _ = viewModel.status.bind { status in
             DispatchQueue.main.async {
                 status == .fetching ? self.showHud() : self.hideHud()
             }
         }.disposed(by: disposeBag)
+        
         _ = viewModel.error.bind { error in
-            self.showAlert(text: error, type: FloatingAlertType.error)
+            guard let e = error else { return }
+            self.showAlert(text: e, type: FloatingAlertType.error)
         }.disposed(by: disposeBag)
+        
         _ = viewModel.isRefreshing.bind { bool in
             DispatchQueue.main.async {
                 bool ? self.refresher.beginRefreshing() : self.refresher.endRefreshing()
             }
-        }
+        }.disposed(by: disposeBag)
+        
         dataSource = RxTableViewSectionedReloadDataSource<SectionModel<String, JobViewModel>> { (dataSource, tableView, indexPath, item) -> JobTableViewCell in
             let cell = tableView.dequeueReusableCell(withIdentifier: self.jobCell) as! JobTableViewCell
             cell.update(model: item)
             return cell
         }
+        
         viewModel.jobsObserver.bind(to: jobListTableView.rx.items(dataSource: dataSource)).disposed(by: disposeBag)
         jobListTableView.rx.setDelegate(self).disposed(by: disposeBag)
-        
         
         jobListTableView.addSubview(refresher)
         refresher.addTarget(self, action: #selector(refresh), for: .valueChanged)
@@ -80,6 +84,10 @@ class JobListViewController: BaseViewController {
 
     @objc func refresh() {
         viewModel.refresh()
+    }
+    
+    @IBAction func didPressKaart(_ sender: Any) {
+        self.present(JobMapViewController(viewModel: JobMapViewModel()), animated: true, completion: nil)
     }
 }
 
@@ -97,7 +105,7 @@ extension JobListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if scrollDirection == .down {
                 let jobs = viewModel.jobsObserver.value
-                if indexPath.section == jobs.count - 1 && indexPath.row == jobs.last!.items.count - 10 {
+                if indexPath.section == jobs.count - 1 && indexPath.row == 0 {
                     viewModel.fetchJobViewModels()
                 }
         }

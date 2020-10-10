@@ -27,12 +27,4 @@ extension Data {
         print("\(statusCode)")
         print("==============================================")
     }
-    
-    public var base64En: String {
-        return self.base64EncodedString()
-    }
-    
-    public var base76En: String {
-        return self.base64EncodedString(options: Data.Base64EncodingOptions.lineLength76Characters)
-    }
 }

@@ -14,17 +14,13 @@ class JobListHeaderView: UIView {
         super.init(frame: frame)
         label = UILabel()
         self.addSubview(label)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
         label.frame = CGRect(x: 0, y: 0, width: frame.width - 30, height: 40)
         label.font = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.bold)
         label.backgroundColor = .white
         label.center = center
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }

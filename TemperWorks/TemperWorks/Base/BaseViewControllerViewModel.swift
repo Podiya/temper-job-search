@@ -13,8 +13,7 @@ enum Status {
     case done
 }
 
-
 class BaseViewControllerViewModel {
     var status = BehaviorSubject<Status>(value: Status.done)
-    var error = BehaviorSubject<String>(value: "")
+    var error = BehaviorSubject<String?>(value: nil)
 }

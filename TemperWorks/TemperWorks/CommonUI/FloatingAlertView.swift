@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 enum FloatingAlertType {
     case success
@@ -32,11 +33,12 @@ class FloatingAlertView: UIView {
         childView.layer.cornerRadius = 14
         self.addSubview(childView)
         
-        childView.translatesAutoresizingMaskIntoConstraints = false
-        childView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10).isActive = true
-        childView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10).isActive = true
-        childView.topAnchor.constraint(equalTo: self.topAnchor, constant: 10).isActive = true
-        childView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 10).isActive = true
+        childView.snp.makeConstraints { (make) in
+            make.leading.equalTo(10)
+            make.trailing.equalTo(-10)
+            make.top.equalTo(10)
+            make.bottom.equalTo(10)
+        }
         
         textLabel.text = ""
         textLabel.textAlignment = .center
@@ -45,12 +47,12 @@ class FloatingAlertView: UIView {
         textLabel.numberOfLines = 0
         childView.addSubview(textLabel)
         
-        textLabel.translatesAutoresizingMaskIntoConstraints = false
-        textLabel.leadingAnchor.constraint(equalTo: childView.leadingAnchor, constant: 10).isActive = true
-        textLabel.trailingAnchor.constraint(equalTo: childView.trailingAnchor, constant: -10).isActive = true
-        textLabel.topAnchor.constraint(equalTo: childView.topAnchor, constant: 10).isActive = true
-        textLabel.bottomAnchor.constraint(equalTo: childView.bottomAnchor, constant: -10).isActive = true
-        
+        textLabel.snp.makeConstraints { (make) in
+            make.leading.equalTo(childView.snp.leading).offset(10)
+            make.trailing.equalTo(childView.snp.trailing).offset(-10)
+            make.top.equalTo(childView.snp.top).offset(10)
+            make.bottom.equalTo(childView.snp.bottom).offset(-10)
+        }
     }
     
     required init?(coder: NSCoder) {

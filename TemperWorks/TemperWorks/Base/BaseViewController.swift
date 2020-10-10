@@ -22,7 +22,6 @@ class BaseViewController: UIViewController, UIViewControllerSetup {
         setupUI()
     }
     
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         setupViewModelListners()

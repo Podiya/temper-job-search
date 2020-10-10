@@ -18,7 +18,6 @@ class JobListViewModel: BaseViewControllerViewModel {
     private let formatEEEEdMMMM = "EEEE d MMMM"
     var jobsObserver = BehaviorRelay<[SectionModel<String, JobViewModel>]>(value: [])
     var isRefreshing = BehaviorSubject<Bool>(value: false)
-    var jobDates = [String]()
     
     
     init(jobListService: JobListServiceProtocol = JobListService()) {

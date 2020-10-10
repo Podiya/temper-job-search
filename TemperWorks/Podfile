@@ -8,7 +8,8 @@ target 'TemperWorks' do
   # Pods for TemperWorks
   pod 'RxSwift', '5.1.1'
   pod 'RxCocoa', '5.1.1'
-  pod 'RxDataSources'
-  pod 'Nuke'
+  pod 'RxDataSources', '4.0.1'
+  pod 'Nuke', '9.1.2'
+  pod 'SnapKit', '5.0.1'
   
 end
