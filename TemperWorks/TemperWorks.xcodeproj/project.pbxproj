@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,41 @@
 		CE4C290A252E5E8E00C7C77E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C2909252E5E8E00C7C77E /* SceneDelegate.swift */; };
 		CE4C2911252E5E8F00C7C77E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE4C2910252E5E8F00C7C77E /* Assets.xcassets */; };
 		CE4C2914252E5E8F00C7C77E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE4C2912252E5E8F00C7C77E /* LaunchScreen.storyboard */; };
+		CE4C2927252E68CB00C7C77E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C2926252E68CB00C7C77E /* AppCoordinator.swift */; };
+		CE4C292C252E6A2B00C7C77E /* JobListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C292A252E6A2B00C7C77E /* JobListViewController.swift */; };
+		CE4C292D252E6A2B00C7C77E /* JobListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE4C292B252E6A2B00C7C77E /* JobListViewController.xib */; };
+		CE4C2931252E6C6100C7C77E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C2930252E6C6100C7C77E /* BaseViewController.swift */; };
+		CE668DAC2531E98A00DFC435 /* GreenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE668DAB2531E98A00DFC435 /* GreenButton.swift */; };
+		CE8E58E32531FDBB005E7A17 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E58E12531FDBB005E7A17 /* SignupViewController.swift */; };
+		CE8E58E42531FDBB005E7A17 /* SignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8E58E22531FDBB005E7A17 /* SignupViewController.xib */; };
+		CE8E58E82531FF86005E7A17 /* MobileNumberValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E58E62531FF86005E7A17 /* MobileNumberValidationViewController.swift */; };
+		CE8E58E92531FF86005E7A17 /* MobileNumberValidationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8E58E72531FF86005E7A17 /* MobileNumberValidationViewController.xib */; };
+		CE8E58ED253205B7005E7A17 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E58EC253205B7005E7A17 /* UIViewControllerExtension.swift */; };
+		CEA78ED6253035B300C33665 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA78ED5253035B300C33665 /* HttpClient.swift */; };
+		CEA78EDB2530369600C33665 /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA78EDA2530369600C33665 /* BundleExtension.swift */; };
+		CEA78EDF253036D400C33665 /* DataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA78EDE253036D400C33665 /* DataExtension.swift */; };
+		CEA78EE22530377E00C33665 /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEA78EE12530377E00C33665 /* Settings.plist */; };
+		CEA78EE6253096EE00C33665 /* APIResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA78EE5253096EE00C33665 /* APIResponseModel.swift */; };
+		CEA78EEA2530971800C33665 /* JobModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA78EE92530971800C33665 /* JobModel.swift */; };
+		CEA78EED25309C3A00C33665 /* JobListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA78EEC25309C3A00C33665 /* JobListService.swift */; };
+		CEA78EF02530B86600C33665 /* PulsateHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA78EEF2530B86600C33665 /* PulsateHUD.swift */; };
+		CEA78EF32530B88D00C33665 /* FloatingAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA78EF22530B88D00C33665 /* FloatingAlertView.swift */; };
+		CEA78EF62530B8F900C33665 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA78EF52530B8F900C33665 /* Colors.xcassets */; };
+		CEA78EF92530BE0100C33665 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA78EF82530BE0100C33665 /* UIImageViewExtension.swift */; };
+		CEA78EFE2530C24E00C33665 /* JobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA78EFC2530C24E00C33665 /* JobTableViewCell.swift */; };
+		CEA78EFF2530C24E00C33665 /* JobTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEA78EFD2530C24E00C33665 /* JobTableViewCell.xib */; };
+		CEA78F022531021300C33665 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA78F012531021300C33665 /* UIViewExtension.swift */; };
+		CEA85484253199B60017E7AF /* JobListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA85483253199B60017E7AF /* JobListHeaderView.swift */; };
+		CEAE59BC2531B73400E88698 /* JobMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAE59BA2531B73400E88698 /* JobMapViewController.swift */; };
+		CEAE59BD2531B73400E88698 /* JobMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEAE59BB2531B73400E88698 /* JobMapViewController.xib */; };
+		CEAE59C22531DB9D00E88698 /* JobMapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAE59C12531DB9D00E88698 /* JobMapService.swift */; };
+		CEAE59C52531DBC400E88698 /* JobMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAE59C42531DBC400E88698 /* JobMapViewModel.swift */; };
+		CEAE59C82531DBF100E88698 /* JobMapLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAE59C72531DBF100E88698 /* JobMapLocationViewModel.swift */; };
+		CEB57BBA25315E4A00DB491A /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB57BB925315E4A00DB491A /* DateExtension.swift */; };
+		CEB57BBD25315E7300DB491A /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB57BBC25315E7300DB491A /* StringExtension.swift */; };
+		CEB57BC02531665B00DB491A /* JobListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB57BBF2531665B00DB491A /* JobListViewModel.swift */; };
+		CEB57BC3253166B600DB491A /* BaseViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB57BC2253166B600DB491A /* BaseViewControllerViewModel.swift */; };
+		CEB57BC7253166EA00DB491A /* JobViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB57BC6253166EA00DB491A /* JobViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +59,41 @@
 		CE4C2910252E5E8F00C7C77E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE4C2913252E5E8F00C7C77E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE4C2915252E5E8F00C7C77E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE4C2926252E68CB00C7C77E /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		CE4C292A252E6A2B00C7C77E /* JobListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListViewController.swift; sourceTree = "<group>"; };
+		CE4C292B252E6A2B00C7C77E /* JobListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobListViewController.xib; sourceTree = "<group>"; };
+		CE4C2930252E6C6100C7C77E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		CE668DAB2531E98A00DFC435 /* GreenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenButton.swift; sourceTree = "<group>"; };
+		CE8E58E12531FDBB005E7A17 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		CE8E58E22531FDBB005E7A17 /* SignupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupViewController.xib; sourceTree = "<group>"; };
+		CE8E58E62531FF86005E7A17 /* MobileNumberValidationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileNumberValidationViewController.swift; sourceTree = "<group>"; };
+		CE8E58E72531FF86005E7A17 /* MobileNumberValidationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MobileNumberValidationViewController.xib; sourceTree = "<group>"; };
+		CE8E58EC253205B7005E7A17 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		CEA78ED5253035B300C33665 /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		CEA78EDA2530369600C33665 /* BundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
+		CEA78EDE253036D400C33665 /* DataExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtension.swift; sourceTree = "<group>"; };
+		CEA78EE12530377E00C33665 /* Settings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
+		CEA78EE5253096EE00C33665 /* APIResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponseModel.swift; sourceTree = "<group>"; };
+		CEA78EE92530971800C33665 /* JobModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobModel.swift; sourceTree = "<group>"; };
+		CEA78EEC25309C3A00C33665 /* JobListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListService.swift; sourceTree = "<group>"; };
+		CEA78EEF2530B86600C33665 /* PulsateHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulsateHUD.swift; sourceTree = "<group>"; };
+		CEA78EF22530B88D00C33665 /* FloatingAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingAlertView.swift; sourceTree = "<group>"; };
+		CEA78EF52530B8F900C33665 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		CEA78EF82530BE0100C33665 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		CEA78EFC2530C24E00C33665 /* JobTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTableViewCell.swift; sourceTree = "<group>"; };
+		CEA78EFD2530C24E00C33665 /* JobTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobTableViewCell.xib; sourceTree = "<group>"; };
+		CEA78F012531021300C33665 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		CEA85483253199B60017E7AF /* JobListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListHeaderView.swift; sourceTree = "<group>"; };
+		CEAE59BA2531B73400E88698 /* JobMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobMapViewController.swift; sourceTree = "<group>"; };
+		CEAE59BB2531B73400E88698 /* JobMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobMapViewController.xib; sourceTree = "<group>"; };
+		CEAE59C12531DB9D00E88698 /* JobMapService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobMapService.swift; sourceTree = "<group>"; };
+		CEAE59C42531DBC400E88698 /* JobMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobMapViewModel.swift; sourceTree = "<group>"; };
+		CEAE59C72531DBF100E88698 /* JobMapLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobMapLocationViewModel.swift; sourceTree = "<group>"; };
+		CEB57BB925315E4A00DB491A /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		CEB57BBC25315E7300DB491A /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		CEB57BBF2531665B00DB491A /* JobListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListViewModel.swift; sourceTree = "<group>"; };
+		CEB57BC2253166B600DB491A /* BaseViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewControllerViewModel.swift; sourceTree = "<group>"; };
+		CEB57BC6253166EA00DB491A /* JobViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +122,6 @@
 				B82E71205A5911DFBCA843D3 /* Pods-TemperWorks.debug.xcconfig */,
 				7FB35465056D70B61CB26591 /* Pods-TemperWorks.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -77,13 +146,168 @@
 		CE4C2906252E5E8E00C7C77E /* TemperWorks */ = {
 			isa = PBXGroup;
 			children = (
+				CE8E58DD2531FCF3005E7A17 /* Authorization */,
+				CEB57BCC253167EA00DB491A /* Base */,
+				CEB57BCB253167D400DB491A /* CommonUI */,
+				CEA78ED92530360600C33665 /* Extensions */,
+				CEA78ED42530359100C33665 /* Clients */,
+				CE4C2929252E69BD00C7C77E /* JobList */,
+				CEAE59B92531B6C300E88698 /* JobMap */,
 				CE4C2907252E5E8E00C7C77E /* AppDelegate.swift */,
 				CE4C2909252E5E8E00C7C77E /* SceneDelegate.swift */,
+				CE4C2926252E68CB00C7C77E /* AppCoordinator.swift */,
+				CEA78EE5253096EE00C33665 /* APIResponseModel.swift */,
 				CE4C2910252E5E8F00C7C77E /* Assets.xcassets */,
+				CEA78EF52530B8F900C33665 /* Colors.xcassets */,
 				CE4C2912252E5E8F00C7C77E /* LaunchScreen.storyboard */,
 				CE4C2915252E5E8F00C7C77E /* Info.plist */,
+				CEA78EE12530377E00C33665 /* Settings.plist */,
 			);
 			path = TemperWorks;
+			sourceTree = "<group>";
+		};
+		CE4C2929252E69BD00C7C77E /* JobList */ = {
+			isa = PBXGroup;
+			children = (
+				CE4C292A252E6A2B00C7C77E /* JobListViewController.swift */,
+				CE4C292B252E6A2B00C7C77E /* JobListViewController.xib */,
+				CEB57BC5253166DC00DB491A /* ViewModels */,
+				CEB57BCA2531679C00DB491A /* Service */,
+				CEA78EE4253096D900C33665 /* Models */,
+				CEA78EFB2530C21F00C33665 /* Views */,
+			);
+			path = JobList;
+			sourceTree = "<group>";
+		};
+		CE8E58DD2531FCF3005E7A17 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				CE8E58E02531FD6F005E7A17 /* MobileNumberValidation */,
+				CE8E58DE2531FD00005E7A17 /* Signup */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
+		CE8E58DE2531FD00005E7A17 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				CE8E58E12531FDBB005E7A17 /* SignupViewController.swift */,
+				CE8E58E22531FDBB005E7A17 /* SignupViewController.xib */,
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
+		CE8E58E02531FD6F005E7A17 /* MobileNumberValidation */ = {
+			isa = PBXGroup;
+			children = (
+				CE8E58E62531FF86005E7A17 /* MobileNumberValidationViewController.swift */,
+				CE8E58E72531FF86005E7A17 /* MobileNumberValidationViewController.xib */,
+			);
+			path = MobileNumberValidation;
+			sourceTree = "<group>";
+		};
+		CEA78ED42530359100C33665 /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				CEA78ED5253035B300C33665 /* HttpClient.swift */,
+			);
+			path = Clients;
+			sourceTree = "<group>";
+		};
+		CEA78ED92530360600C33665 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CEA78EDA2530369600C33665 /* BundleExtension.swift */,
+				CEA78EDE253036D400C33665 /* DataExtension.swift */,
+				CEA78EF82530BE0100C33665 /* UIImageViewExtension.swift */,
+				CEA78F012531021300C33665 /* UIViewExtension.swift */,
+				CEB57BB925315E4A00DB491A /* DateExtension.swift */,
+				CEB57BBC25315E7300DB491A /* StringExtension.swift */,
+				CE8E58EC253205B7005E7A17 /* UIViewControllerExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CEA78EE4253096D900C33665 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CEA78EE92530971800C33665 /* JobModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CEA78EFB2530C21F00C33665 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CEA78EFC2530C24E00C33665 /* JobTableViewCell.swift */,
+				CEA78EFD2530C24E00C33665 /* JobTableViewCell.xib */,
+				CEA85483253199B60017E7AF /* JobListHeaderView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CEAE59B92531B6C300E88698 /* JobMap */ = {
+			isa = PBXGroup;
+			children = (
+				CEAE59CB2531DFAA00E88698 /* Service */,
+				CEAE59CA2531DF9500E88698 /* ViewModels */,
+				CEAE59BA2531B73400E88698 /* JobMapViewController.swift */,
+				CEAE59BB2531B73400E88698 /* JobMapViewController.xib */,
+			);
+			path = JobMap;
+			sourceTree = "<group>";
+		};
+		CEAE59CA2531DF9500E88698 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CEAE59C72531DBF100E88698 /* JobMapLocationViewModel.swift */,
+				CEAE59C42531DBC400E88698 /* JobMapViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CEAE59CB2531DFAA00E88698 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CEAE59C12531DB9D00E88698 /* JobMapService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		CEB57BC5253166DC00DB491A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CEB57BC6253166EA00DB491A /* JobViewModel.swift */,
+				CEB57BBF2531665B00DB491A /* JobListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CEB57BCA2531679C00DB491A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CEA78EEC25309C3A00C33665 /* JobListService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		CEB57BCB253167D400DB491A /* CommonUI */ = {
+			isa = PBXGroup;
+			children = (
+				CEA78EEF2530B86600C33665 /* PulsateHUD.swift */,
+				CEA78EF22530B88D00C33665 /* FloatingAlertView.swift */,
+				CE668DAB2531E98A00DFC435 /* GreenButton.swift */,
+			);
+			path = CommonUI;
+			sourceTree = "<group>";
+		};
+		CEB57BCC253167EA00DB491A /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				CEB57BC2253166B600DB491A /* BaseViewControllerViewModel.swift */,
+				CE4C2930252E6C6100C7C77E /* BaseViewController.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,8 +369,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEAE59BD2531B73400E88698 /* JobMapViewController.xib in Resources */,
+				CEA78EF62530B8F900C33665 /* Colors.xcassets in Resources */,
 				CE4C2914252E5E8F00C7C77E /* LaunchScreen.storyboard in Resources */,
+				CEA78EE22530377E00C33665 /* Settings.plist in Resources */,
 				CE4C2911252E5E8F00C7C77E /* Assets.xcassets in Resources */,
+				CE8E58E92531FF86005E7A17 /* MobileNumberValidationViewController.xib in Resources */,
+				CE4C292D252E6A2B00C7C77E /* JobListViewController.xib in Resources */,
+				CE8E58E42531FDBB005E7A17 /* SignupViewController.xib in Resources */,
+				CEA78EFF2530C24E00C33665 /* JobTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,7 +430,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEAE59C82531DBF100E88698 /* JobMapLocationViewModel.swift in Sources */,
+				CEA78EF32530B88D00C33665 /* FloatingAlertView.swift in Sources */,
+				CE8E58ED253205B7005E7A17 /* UIViewControllerExtension.swift in Sources */,
+				CE8E58E82531FF86005E7A17 /* MobileNumberValidationViewController.swift in Sources */,
+				CEB57BBA25315E4A00DB491A /* DateExtension.swift in Sources */,
+				CEB57BC7253166EA00DB491A /* JobViewModel.swift in Sources */,
+				CE4C2931252E6C6100C7C77E /* BaseViewController.swift in Sources */,
+				CEA78EED25309C3A00C33665 /* JobListService.swift in Sources */,
+				CEA78EF02530B86600C33665 /* PulsateHUD.swift in Sources */,
+				CEA78EEA2530971800C33665 /* JobModel.swift in Sources */,
+				CEA78EE6253096EE00C33665 /* APIResponseModel.swift in Sources */,
+				CEAE59C22531DB9D00E88698 /* JobMapService.swift in Sources */,
+				CEA78F022531021300C33665 /* UIViewExtension.swift in Sources */,
+				CEA85484253199B60017E7AF /* JobListHeaderView.swift in Sources */,
+				CE4C292C252E6A2B00C7C77E /* JobListViewController.swift in Sources */,
+				CE4C2927252E68CB00C7C77E /* AppCoordinator.swift in Sources */,
+				CEA78EF92530BE0100C33665 /* UIImageViewExtension.swift in Sources */,
+				CEA78EFE2530C24E00C33665 /* JobTableViewCell.swift in Sources */,
+				CEA78EDB2530369600C33665 /* BundleExtension.swift in Sources */,
+				CEAE59BC2531B73400E88698 /* JobMapViewController.swift in Sources */,
 				CE4C2908252E5E8E00C7C77E /* AppDelegate.swift in Sources */,
+				CEAE59C52531DBC400E88698 /* JobMapViewModel.swift in Sources */,
+				CEB57BBD25315E7300DB491A /* StringExtension.swift in Sources */,
+				CEB57BC02531665B00DB491A /* JobListViewModel.swift in Sources */,
+				CE8E58E32531FDBB005E7A17 /* SignupViewController.swift in Sources */,
+				CEA78EDF253036D400C33665 /* DataExtension.swift in Sources */,
+				CEA78ED6253035B300C33665 /* HttpClient.swift in Sources */,
+				CEB57BC3253166B600DB491A /* BaseViewControllerViewModel.swift in Sources */,
+				CE668DAC2531E98A00DFC435 /* GreenButton.swift in Sources */,
 				CE4C290A252E5E8E00C7C77E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

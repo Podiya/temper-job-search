@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JobMapViewController" customModule="TemperWorks" customModuleProvider="target">
+            <connections>
+                <outlet property="datePicker" destination="rRV-d0-DgH" id="Qp9-ct-b9T"/>
+                <outlet property="mapView" destination="N18-Rp-Dia" id="yyW-kf-Oo1"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="rRV-d0-DgH">
+                    <rect key="frame" x="0.0" y="792" width="414" height="70"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="kTI-yB-7Te"/>
+                    </constraints>
+                </datePicker>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="N18-Rp-Dia">
+                    <rect key="frame" x="0.0" y="44" width="414" height="748"/>
+                </mapView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="noo-A2-naf">
+                    <rect key="frame" x="360" y="54" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="h6h-GZ-jFG"/>
+                        <constraint firstAttribute="width" constant="44" id="jsy-BU-ac8"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal">
+                        <imageReference key="image" image="xmark.circle.fill" catalog="system" symbolScale="large"/>
+                    </state>
+                    <connections>
+                        <action selector="didPressClose:" destination="-1" eventType="touchUpInside" id="WmU-TS-hp4"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="rRV-d0-DgH" firstAttribute="top" secondItem="N18-Rp-Dia" secondAttribute="bottom" id="Ia7-r5-GoP"/>
+                <constraint firstItem="rRV-d0-DgH" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="P2a-KL-Wqc"/>
+                <constraint firstItem="rRV-d0-DgH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="VXm-tT-zlj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="noo-A2-naf" secondAttribute="trailing" constant="10" id="boO-jN-nHr"/>
+                <constraint firstItem="noo-A2-naf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="dPs-B9-svL"/>
+                <constraint firstItem="N18-Rp-Dia" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="e0Z-pV-5G4"/>
+                <constraint firstItem="N18-Rp-Dia" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="n0Z-g0-qso"/>
+                <constraint firstItem="N18-Rp-Dia" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="oBA-hX-75c"/>
+                <constraint firstItem="rRV-d0-DgH" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="xHm-OL-oUF"/>
+            </constraints>
+            <point key="canvasLocation" x="-181.15942028985509" y="91.741071428571431"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
