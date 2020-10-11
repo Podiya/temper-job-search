@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0BE0998EB0BD44A97585DEB6 /* Pods_TemperWorks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5431284A8E30761B41B082BC /* Pods_TemperWorks.framework */; };
+		A5E0B5147266FDED7D95DC0D /* Pods_TemperWorks_TemperWorksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62311D24DA847E7C50868471 /* Pods_TemperWorks_TemperWorksTests.framework */; };
 		CE4C2908252E5E8E00C7C77E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C2907252E5E8E00C7C77E /* AppDelegate.swift */; };
 		CE4C290A252E5E8E00C7C77E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C2909252E5E8E00C7C77E /* SceneDelegate.swift */; };
 		CE4C2911252E5E8F00C7C77E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE4C2910252E5E8F00C7C77E /* Assets.xcassets */; };
@@ -16,12 +17,19 @@
 		CE4C292C252E6A2B00C7C77E /* JobListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C292A252E6A2B00C7C77E /* JobListViewController.swift */; };
 		CE4C292D252E6A2B00C7C77E /* JobListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE4C292B252E6A2B00C7C77E /* JobListViewController.xib */; };
 		CE4C2931252E6C6100C7C77E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C2930252E6C6100C7C77E /* BaseViewController.swift */; };
+		CE5583B92532C92D00E8B748 /* TestSchedulerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5583B82532C92D00E8B748 /* TestSchedulerExtension.swift */; };
 		CE668DAC2531E98A00DFC435 /* GreenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE668DAB2531E98A00DFC435 /* GreenButton.swift */; };
 		CE8E58E32531FDBB005E7A17 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E58E12531FDBB005E7A17 /* SignupViewController.swift */; };
 		CE8E58E42531FDBB005E7A17 /* SignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8E58E22531FDBB005E7A17 /* SignupViewController.xib */; };
 		CE8E58E82531FF86005E7A17 /* MobileNumberValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E58E62531FF86005E7A17 /* MobileNumberValidationViewController.swift */; };
 		CE8E58E92531FF86005E7A17 /* MobileNumberValidationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8E58E72531FF86005E7A17 /* MobileNumberValidationViewController.xib */; };
 		CE8E58ED253205B7005E7A17 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E58EC253205B7005E7A17 /* UIViewControllerExtension.swift */; };
+		CE8E590225328FD2005E7A17 /* JobListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E590125328FD2005E7A17 /* JobListViewModelTests.swift */; };
+		CE8E590625329A22005E7A17 /* jobs.json in Resources */ = {isa = PBXBuildFile; fileRef = CE8E590525329A22005E7A17 /* jobs.json */; };
+		CE8E590C25329A83005E7A17 /* XCTestCaseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E590B25329A83005E7A17 /* XCTestCaseExtension.swift */; };
+		CE8E591025329D10005E7A17 /* JobViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E590F25329D10005E7A17 /* JobViewModelTests.swift */; };
+		CE8E59162532B0B3005E7A17 /* JobMapLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E59152532B0B3005E7A17 /* JobMapLocationViewModel.swift */; };
+		CE8E591C2532B4C1005E7A17 /* JobMapViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E591B2532B4C1005E7A17 /* JobMapViewModelTests.swift */; };
 		CEA78ED6253035B300C33665 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA78ED5253035B300C33665 /* HttpClient.swift */; };
 		CEA78EDB2530369600C33665 /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA78EDA2530369600C33665 /* BundleExtension.swift */; };
 		CEA78EDF253036D400C33665 /* DataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA78EDE253036D400C33665 /* DataExtension.swift */; };
@@ -47,11 +55,26 @@
 		CEB57BC02531665B00DB491A /* JobListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB57BBF2531665B00DB491A /* JobListViewModel.swift */; };
 		CEB57BC3253166B600DB491A /* BaseViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB57BC2253166B600DB491A /* BaseViewControllerViewModel.swift */; };
 		CEB57BC7253166EA00DB491A /* JobViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB57BC6253166EA00DB491A /* JobViewModel.swift */; };
+		CEFBC2DA2532BCA700D4D4C8 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEFBC2D92532BCA700D4D4C8 /* RxBlocking.framework */; };
+		CEFBC2DC2532BCA800D4D4C8 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEFBC2DB2532BCA800D4D4C8 /* RxTest.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		CE8E58F825328F5D005E7A17 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE4C28FC252E5E8E00C7C77E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE4C2903252E5E8E00C7C77E;
+			remoteInfo = TemperWorks;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		2810875D654DBA7E460286E2 /* Pods-TemperWorks-TemperWorksTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TemperWorks-TemperWorksTests.debug.xcconfig"; path = "Target Support Files/Pods-TemperWorks-TemperWorksTests/Pods-TemperWorks-TemperWorksTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5431284A8E30761B41B082BC /* Pods_TemperWorks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TemperWorks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		62311D24DA847E7C50868471 /* Pods_TemperWorks_TemperWorksTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TemperWorks_TemperWorksTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FB35465056D70B61CB26591 /* Pods-TemperWorks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TemperWorks.release.xcconfig"; path = "Target Support Files/Pods-TemperWorks/Pods-TemperWorks.release.xcconfig"; sourceTree = "<group>"; };
+		804762F9842361237B0A42B9 /* Pods-TemperWorks-TemperWorksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TemperWorks-TemperWorksTests.release.xcconfig"; path = "Target Support Files/Pods-TemperWorks-TemperWorksTests/Pods-TemperWorks-TemperWorksTests.release.xcconfig"; sourceTree = "<group>"; };
 		B82E71205A5911DFBCA843D3 /* Pods-TemperWorks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TemperWorks.debug.xcconfig"; path = "Target Support Files/Pods-TemperWorks/Pods-TemperWorks.debug.xcconfig"; sourceTree = "<group>"; };
 		CE4C2904252E5E8E00C7C77E /* TemperWorks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TemperWorks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4C2907252E5E8E00C7C77E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,12 +86,21 @@
 		CE4C292A252E6A2B00C7C77E /* JobListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListViewController.swift; sourceTree = "<group>"; };
 		CE4C292B252E6A2B00C7C77E /* JobListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobListViewController.xib; sourceTree = "<group>"; };
 		CE4C2930252E6C6100C7C77E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		CE5583B82532C92D00E8B748 /* TestSchedulerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSchedulerExtension.swift; sourceTree = "<group>"; };
 		CE668DAB2531E98A00DFC435 /* GreenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenButton.swift; sourceTree = "<group>"; };
 		CE8E58E12531FDBB005E7A17 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		CE8E58E22531FDBB005E7A17 /* SignupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupViewController.xib; sourceTree = "<group>"; };
 		CE8E58E62531FF86005E7A17 /* MobileNumberValidationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileNumberValidationViewController.swift; sourceTree = "<group>"; };
 		CE8E58E72531FF86005E7A17 /* MobileNumberValidationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MobileNumberValidationViewController.xib; sourceTree = "<group>"; };
 		CE8E58EC253205B7005E7A17 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		CE8E58F325328F5D005E7A17 /* TemperWorksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TemperWorksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE8E58F725328F5D005E7A17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE8E590125328FD2005E7A17 /* JobListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListViewModelTests.swift; sourceTree = "<group>"; };
+		CE8E590525329A22005E7A17 /* jobs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jobs.json; sourceTree = "<group>"; };
+		CE8E590B25329A83005E7A17 /* XCTestCaseExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCaseExtension.swift; sourceTree = "<group>"; };
+		CE8E590F25329D10005E7A17 /* JobViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobViewModelTests.swift; sourceTree = "<group>"; };
+		CE8E59152532B0B3005E7A17 /* JobMapLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobMapLocationViewModel.swift; sourceTree = "<group>"; };
+		CE8E591B2532B4C1005E7A17 /* JobMapViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobMapViewModelTests.swift; sourceTree = "<group>"; };
 		CEA78ED5253035B300C33665 /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
 		CEA78EDA2530369600C33665 /* BundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
 		CEA78EDE253036D400C33665 /* DataExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtension.swift; sourceTree = "<group>"; };
@@ -94,6 +126,8 @@
 		CEB57BBF2531665B00DB491A /* JobListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListViewModel.swift; sourceTree = "<group>"; };
 		CEB57BC2253166B600DB491A /* BaseViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewControllerViewModel.swift; sourceTree = "<group>"; };
 		CEB57BC6253166EA00DB491A /* JobViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobViewModel.swift; sourceTree = "<group>"; };
+		CEFBC2D92532BCA700D4D4C8 /* RxBlocking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxBlocking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEFBC2DB2532BCA800D4D4C8 /* RxTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,13 +139,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CE8E58F025328F5D005E7A17 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEFBC2DA2532BCA700D4D4C8 /* RxBlocking.framework in Frameworks */,
+				CEFBC2DC2532BCA800D4D4C8 /* RxTest.framework in Frameworks */,
+				A5E0B5147266FDED7D95DC0D /* Pods_TemperWorks_TemperWorksTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		3299B3DC7C5F4D169D1F8930 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CEFBC2D92532BCA700D4D4C8 /* RxBlocking.framework */,
+				CEFBC2DB2532BCA800D4D4C8 /* RxTest.framework */,
 				5431284A8E30761B41B082BC /* Pods_TemperWorks.framework */,
+				62311D24DA847E7C50868471 /* Pods_TemperWorks_TemperWorksTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -121,6 +168,8 @@
 			children = (
 				B82E71205A5911DFBCA843D3 /* Pods-TemperWorks.debug.xcconfig */,
 				7FB35465056D70B61CB26591 /* Pods-TemperWorks.release.xcconfig */,
+				2810875D654DBA7E460286E2 /* Pods-TemperWorks-TemperWorksTests.debug.xcconfig */,
+				804762F9842361237B0A42B9 /* Pods-TemperWorks-TemperWorksTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -129,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				CE4C2906252E5E8E00C7C77E /* TemperWorks */,
+				CE8E58F425328F5D005E7A17 /* TemperWorksTests */,
 				CE4C2905252E5E8E00C7C77E /* Products */,
 				4428C4F101895BDFA204528A /* Pods */,
 				3299B3DC7C5F4D169D1F8930 /* Frameworks */,
@@ -139,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				CE4C2904252E5E8E00C7C77E /* TemperWorks.app */,
+				CE8E58F325328F5D005E7A17 /* TemperWorksTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -204,6 +255,37 @@
 				CE8E58E72531FF86005E7A17 /* MobileNumberValidationViewController.xib */,
 			);
 			path = MobileNumberValidation;
+			sourceTree = "<group>";
+		};
+		CE8E58F425328F5D005E7A17 /* TemperWorksTests */ = {
+			isa = PBXGroup;
+			children = (
+				CE8E59142532B081005E7A17 /* Extensions */,
+				CE8E59132532B06F005E7A17 /* Resources */,
+				CE8E58F725328F5D005E7A17 /* Info.plist */,
+				CE8E590125328FD2005E7A17 /* JobListViewModelTests.swift */,
+				CE8E590F25329D10005E7A17 /* JobViewModelTests.swift */,
+				CE8E59152532B0B3005E7A17 /* JobMapLocationViewModel.swift */,
+				CE8E591B2532B4C1005E7A17 /* JobMapViewModelTests.swift */,
+			);
+			path = TemperWorksTests;
+			sourceTree = "<group>";
+		};
+		CE8E59132532B06F005E7A17 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE8E590525329A22005E7A17 /* jobs.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CE8E59142532B081005E7A17 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CE8E590B25329A83005E7A17 /* XCTestCaseExtension.swift */,
+				CE5583B82532C92D00E8B748 /* TestSchedulerExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		CEA78ED42530359100C33665 /* Clients */ = {
@@ -332,6 +414,26 @@
 			productReference = CE4C2904252E5E8E00C7C77E /* TemperWorks.app */;
 			productType = "com.apple.product-type.application";
 		};
+		CE8E58F225328F5D005E7A17 /* TemperWorksTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE8E58FA25328F5D005E7A17 /* Build configuration list for PBXNativeTarget "TemperWorksTests" */;
+			buildPhases = (
+				E3244C05DB5B89740997A86D /* [CP] Check Pods Manifest.lock */,
+				CE8E58EF25328F5D005E7A17 /* Sources */,
+				CE8E58F025328F5D005E7A17 /* Frameworks */,
+				CE8E58F125328F5D005E7A17 /* Resources */,
+				D9CCB1585E65007BBE2AEE05 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE8E58F925328F5D005E7A17 /* PBXTargetDependency */,
+			);
+			name = TemperWorksTests;
+			productName = TemperWorksTests;
+			productReference = CE8E58F325328F5D005E7A17 /* TemperWorksTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -343,6 +445,11 @@
 				TargetAttributes = {
 					CE4C2903252E5E8E00C7C77E = {
 						CreatedOnToolsVersion = 12.0;
+					};
+					CE8E58F225328F5D005E7A17 = {
+						CreatedOnToolsVersion = 12.0.1;
+						LastSwiftMigration = 1200;
+						TestTargetID = CE4C2903252E5E8E00C7C77E;
 					};
 				};
 			};
@@ -360,6 +467,7 @@
 			projectRoot = "";
 			targets = (
 				CE4C2903252E5E8E00C7C77E /* TemperWorks */,
+				CE8E58F225328F5D005E7A17 /* TemperWorksTests */,
 			);
 		};
 /* End PBXProject section */
@@ -378,6 +486,14 @@
 				CE4C292D252E6A2B00C7C77E /* JobListViewController.xib in Resources */,
 				CE8E58E42531FDBB005E7A17 /* SignupViewController.xib in Resources */,
 				CEA78EFF2530C24E00C33665 /* JobTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE8E58F125328F5D005E7A17 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE8E590625329A22005E7A17 /* jobs.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +533,45 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-TemperWorks-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9CCB1585E65007BBE2AEE05 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TemperWorks-TemperWorksTests/Pods-TemperWorks-TemperWorksTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TemperWorks-TemperWorksTests/Pods-TemperWorks-TemperWorksTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TemperWorks-TemperWorksTests/Pods-TemperWorks-TemperWorksTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3244C05DB5B89740997A86D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TemperWorks-TemperWorksTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -463,7 +618,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CE8E58EF25328F5D005E7A17 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE8E590C25329A83005E7A17 /* XCTestCaseExtension.swift in Sources */,
+				CE8E591025329D10005E7A17 /* JobViewModelTests.swift in Sources */,
+				CE8E59162532B0B3005E7A17 /* JobMapLocationViewModel.swift in Sources */,
+				CE8E590225328FD2005E7A17 /* JobListViewModelTests.swift in Sources */,
+				CE8E591C2532B4C1005E7A17 /* JobMapViewModelTests.swift in Sources */,
+				CE5583B92532C92D00E8B748 /* TestSchedulerExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE8E58F925328F5D005E7A17 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE4C2903252E5E8E00C7C77E /* TemperWorks */;
+			targetProxy = CE8E58F825328F5D005E7A17 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CE4C2912252E5E8F00C7C77E /* LaunchScreen.storyboard */ = {
@@ -635,6 +811,51 @@
 			};
 			name = Release;
 		};
+		CE8E58FB25328F5D005E7A17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2810875D654DBA7E460286E2 /* Pods-TemperWorks-TemperWorksTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8LN88S2WJ6;
+				INFOPLIST_FILE = TemperWorksTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ravindu.TemperWorksTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TemperWorks.app/TemperWorks";
+			};
+			name = Debug;
+		};
+		CE8E58FC25328F5D005E7A17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 804762F9842361237B0A42B9 /* Pods-TemperWorks-TemperWorksTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8LN88S2WJ6;
+				INFOPLIST_FILE = TemperWorksTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ravindu.TemperWorksTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TemperWorks.app/TemperWorks";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -652,6 +873,15 @@
 			buildConfigurations = (
 				CE4C2919252E5E8F00C7C77E /* Debug */,
 				CE4C291A252E5E8F00C7C77E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE8E58FA25328F5D005E7A17 /* Build configuration list for PBXNativeTarget "TemperWorksTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE8E58FB25328F5D005E7A17 /* Debug */,
+				CE8E58FC25328F5D005E7A17 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

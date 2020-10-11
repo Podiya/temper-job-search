@@ -32,6 +32,5 @@ class JobMapViewModel: BaseViewControllerViewModel {
         } onCompleted: {
             self.status.on(.next(.done))
         }.disposed(by: disposeBag)
-        
     }
 }

@@ -74,7 +74,13 @@ class JobListViewController: BaseViewController {
             return cell
         }
         
-        viewModel.jobsObserver.bind(to: jobListTableView.rx.items(dataSource: dataSource)).disposed(by: disposeBag)
+        viewModel.jobsObserver
+            .subscribeOn(MainScheduler.instance)
+            .catchError({ (error) -> Observable<[SectionModel<String, JobViewModel>]> in
+                self.showAlert(text: error.localizedDescription, type: FloatingAlertType.error)
+                return Observable.just([])
+            })
+            .bind(to: jobListTableView.rx.items(dataSource: dataSource)).disposed(by: disposeBag)
         jobListTableView.rx.setDelegate(self).disposed(by: disposeBag)
         
         jobListTableView.addSubview(refresher)
